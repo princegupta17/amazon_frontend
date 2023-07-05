@@ -24,7 +24,7 @@ function Login() {
             user: res.data,
           });
           localStorage.setItem("user", JSON.stringify(res.data));
-          navigate("https://amazon-kk16.onrender.com/");
+          navigate("/");
         } else if (res.data.error) {
           alert(res.data.error);
         }
