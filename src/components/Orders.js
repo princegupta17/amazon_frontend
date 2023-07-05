@@ -11,6 +11,8 @@ function Orders() {
     axios
       .post("/orders/get", { email: user.email })
       .then((res) => setOrders(res.data));
+    
+    // eslint-disable-next-line react-hooks/exhaustive-deps 
   }, []);
   console.log(orders);
 

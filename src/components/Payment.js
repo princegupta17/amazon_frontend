@@ -24,6 +24,8 @@ function Payment() {
     };
     fetchClientSecret();
     console.log("client secret is", clientSecret);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps 
   }, []);
 
   const confirmpayment = async (e) => {
