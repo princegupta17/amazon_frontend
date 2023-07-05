@@ -16,7 +16,7 @@ function Payment() {
 
   useEffect(() => {
     const fetchClientSecret = async () => {
-      const data = await axios.post("https://amazon-kk16.onrender.com/payment/create", {
+      const data = await axios.post("/payment/create", {
         amount: getbaskettotal(basket),
       });
 

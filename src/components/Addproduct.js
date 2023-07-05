@@ -10,7 +10,7 @@ function Addproduct() {
   const addproductdetails = (e) => {
     e.preventDefault();
     axios
-      .post("https://amazon-kk16.onrender.com/products/add", { title, imageurl, price, rating })
+      .post("/products/add", { title, imageurl, price, rating })
       .then(() => {
         settitle("");
         setimageurl("");

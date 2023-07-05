@@ -8,7 +8,7 @@ function Home() {
   const [products, setproducts] = useState("");
   useEffect(() => {
     const fetchdata = async () => {
-      const data = await axios.get("https://amazon-kk16.onrender.com/products/get");
+      const data = await axios.get("/products/get");
       setproducts(data);
     };
     fetchdata();
