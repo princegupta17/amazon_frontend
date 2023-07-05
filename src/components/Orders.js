@@ -9,7 +9,7 @@ function Orders() {
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     axios
-      .post("/orders/get", { email: user.email })
+      .post("https://amazon-kk16.onrender.com/orders/get", { email: user.email })
       .then((res) => setOrders(res.data));
   }, []);
   console.log(orders);

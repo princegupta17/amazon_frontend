@@ -16,7 +16,7 @@ function Login() {
     e.preventDefault();
 
     axios
-      .post("/auth/login", { email, password })
+      .post("https://amazon-kk16.onrender.com/auth/login", { email, password })
       .then((res) => {
         if (!res.data.error) {
           dispatch({
