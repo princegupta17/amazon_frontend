@@ -18,16 +18,22 @@ function Login() {
     axios
       .post("https://amazon-kk16.onrender.com/auth/login", { email, password })
       .then((res) => {
-        if (!res.data.error) {
-          dispatch({
-            type: "SET_USER",
-            user: res.data,
-          });
-          localStorage.setItem("user", JSON.stringify(res.data));
-          navigate("/");
-        } else if (res.data.error) {
-          alert(res.data.error);
-        }
+        dispatch({
+          type: "SET_USER",
+          user: res.data,
+        });
+        localStorage.setItem("user", JSON.stringify(res.data));
+        navigate("/");
+        // if (!res.data.error) {
+        //   dispatch({
+        //     type: "SET_USER",
+        //     user: res.data,
+        //   });
+        //   localStorage.setItem("user", JSON.stringify(res.data));
+        //   navigate("/");
+        // } else if (res.data.error) {
+        //   alert(res.data.error);
+        // }
       })
       .catch((err) => console.warn(err));
   };
