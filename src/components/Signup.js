@@ -14,7 +14,7 @@ function Login() {
   const signup = (e) => {
     e.preventDefault();
     axios
-      .post("/auth/signup", { email, password, fullName })
+      .post("https://amazon-kk16.onrender.com/auth/signup", { email, password, fullName })
       .then((res) => alert(res.data.message))
       .catch((err) => console.warn(err));
 
